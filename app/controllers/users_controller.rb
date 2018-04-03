@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def new 
     @user = User.new
+    @user.username = 'Sava McSavvy'
   end
 
   def create
@@ -12,6 +13,14 @@ class UsersController < ApplicationController
     else
       render :new
     end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    
   end
 
   private

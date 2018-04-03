@@ -1,8 +1,4 @@
-<div class="div-with-errors">
-  <%= @user.errors.full_messages %>
-</div>
-
-<%= form_for @user, url: {action: "create"}, html: {method: "post"} do |f| %>
+<%= form_for @user, url: {action: "update"}, html: {method: "put"} do |f| %>
   Username: <%= f.text_field :username, placeholder: 'Your username here' %>
   Email: <%= f.email_field :email, placeholder: 'example@example.com' %>
   Password: <%= f.password_field :password %>
