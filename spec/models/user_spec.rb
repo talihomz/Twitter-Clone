@@ -54,6 +54,13 @@ describe User, type: :model do
         expect(subject).to_not be_valid
       end
     end
+
+    it 'is invalid when not unique' do 
+      duplicate_user = subject.dup
+      duplicate_user.email = subject.email.upcase
+      subject.save
+      expect(duplicate_user).to_not be_valid
+    end
    end
  end
 end

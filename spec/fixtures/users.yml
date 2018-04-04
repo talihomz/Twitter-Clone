@@ -7,5 +7,5 @@ one:
 
 two:
   username: MyString
-  email: example@example.com
+  email: exampleTwo@example.com
   password: MyString
