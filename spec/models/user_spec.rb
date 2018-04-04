@@ -61,6 +61,13 @@ describe User, type: :model do
       subject.save
       expect(duplicate_user).to_not be_valid
     end
+
+    it 'is saved in lowercase' do
+      mixed_case_email = "Foo@ExAMPle.CoM"
+      subject.email = mixed_case_email
+      subject.save
+      expect(mixed_case_email.downcase).to eq(subject.reload.email)
+    end
    end
  end
 end
