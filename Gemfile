@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # RSpec
 gem 'rspec-rails', group: %i[development test]
+
+# Bcrypt
+gem 'bcrypt', '3.1.11'

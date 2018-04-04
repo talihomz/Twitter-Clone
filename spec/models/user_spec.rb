@@ -69,5 +69,6 @@ describe User, type: :model do
       expect(mixed_case_email.downcase).to eq(subject.reload.email)
     end
    end
+
  end
 end
