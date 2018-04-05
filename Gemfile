@@ -58,3 +58,6 @@ gem 'rspec-rails', group: %i[development test]
 
 # Bcrypt
 gem 'bcrypt', '3.1.11'
+
+# Bootstrap
+gem 'bootstrap-sass', '3.3.7'
