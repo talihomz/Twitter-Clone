@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
 
   get '/signup',   to: 'users#new'
+
+  get '/users/:id', to: 'users#show'
   
-  resource :users, only: [:new, :create, :update, :edit]
+  resource :users #, only: [:new, :create, :update, :edit, :show]
 end
