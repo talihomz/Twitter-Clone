@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get '/signup',   to: 'users#new'
 
-  get '/users/:id', to: 'users#show'
+  get '/users/:id', to: 'users#show', as: 'show_users'
   
   resource :users #, only: [:new, :create, :update, :edit, :show]
 end
