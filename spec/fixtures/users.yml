@@ -6,4 +6,4 @@ one:
 
 two:
   username: MyString
-  email: exampleTwo@example.com
+  email: foo@example.com

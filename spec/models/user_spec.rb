@@ -3,6 +3,7 @@ require 'rails_helper'
 describe User, type: :model do
  fixtures :users
  subject { users(:two) }
+ let(:password) { 'a' * 8 }
 
  describe 'Validations' do
    describe '#username' do
@@ -22,7 +23,9 @@ describe User, type: :model do
      end
 
      it 'is valid with proper data' do
-       expect(users(:one)).to be_valid
+      user = users(:one) 
+      user.password = password
+      expect(user).to be_valid
      end
    end
 
@@ -38,6 +41,7 @@ describe User, type: :model do
     end
 
     it 'is valid with proper data' do
+      subject.password = password
       valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
                            first.last@foo.jp alice+bob@baz.cn]
       valid_addresses.each do |valid_address|
